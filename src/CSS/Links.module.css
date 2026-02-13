@@ -1,0 +1,236 @@
+.ParticleBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.Particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+}
+.Container {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  background: var(--black-trans);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--light-trans);
+  border-radius: 15px 0 0 15px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transform: translateY(0) scale(1);
+}
+
+.LinkItem,
+.AddLink {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pri-trans);
+  border: 1px solid var(--light-trans);
+  border-radius: 12px;
+  color: var(--light);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.LinkItem:hover {
+  background: var(--pri);
+  border-color: var(--light);
+  color: var(--light-trans);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.LinkItem:active,
+.AddLink:active {
+  transform: translateY(-1px);
+}
+.LinkItem:focus,
+.AddLink:focus {
+  color: var(--light);
+}
+
+.LinkItem i,
+.AddLink i {
+  position: relative;
+  z-index: 1;
+}
+.RemoveLink {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: -3rem;
+  right: -2rem;
+  background: var(--red-dull);
+  border-radius: 5px;
+  border: 1px solid var(--light-dull);
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  pointer-events: none;
+}
+.RemoveLink:hover {
+  background: var(--red);
+  border-color: var(--light);
+  color: var(--light);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.RemoveLink i {
+  font-size: 10px;
+}
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.Modal {
+  background: var(--black);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--light-trans);
+  width: 300px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.Modal h2 {
+  margin: 0;
+  color: var(--light);
+}
+.Modal label {
+  align-self: flex-start;
+  color: var(--light);
+  font-size: 14px;
+}
+.Modal input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--light-dull);
+  border-radius: 5px;
+  background: var(--pri-trans);
+  color: var(--light);
+  margin: 10px 0;
+}
+.ModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.ModalActions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.ModalActions .ModalCancelBtn {
+  background: var(--red-dull);
+  color: var(--light);
+}
+
+.ModalActions .ModalCancelBtn:hover {
+  background: var(--red);
+}
+
+.ModalActions .PopAddLink {
+  background: var(--sec-trans);
+  color: var(--light);
+}
+
+.ModalActions .PopAddLink:hover {
+  background: var(--sec);
+  color: var(--black);
+}
+.ModalInfoBtn {
+  background: #9b9908;
+  color: var(--light);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.ModalInfoBtn:hover {
+  background: #fffb00;
+  color: var(--black);
+}
+
+.LinkItemWrapper {
+  position: relative;
+  align-items: center;
+}
+
+.CharLogo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--light);
+}
+
+.HoverPopup {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--light);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: opacity 0.12s ease;
+  z-index: 9999;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+}
