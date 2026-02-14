@@ -12,6 +12,9 @@
 body,html{
   height: 100vh;
   width: 100vw;
+  background: url(/wallpapers/goku.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 *{

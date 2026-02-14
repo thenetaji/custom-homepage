@@ -1,7 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState, useEffect } from "react";
-import gokuWallpaper from '../assests/wallpapers/goku.jpg';
-import spiderNoirWallpaper from '../assests/wallpapers/spider-noir.jpg';
+import gokuWallpaper from '/wallpapers/goku.jpg';
+import spiderNoirWallpaper from '/wallpapers/spider-noir.jpg';
 
 function Wallpaper() {
 
