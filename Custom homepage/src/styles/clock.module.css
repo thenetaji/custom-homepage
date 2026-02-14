@@ -1,0 +1,24 @@
+
+@font-face {
+  font-family: "Digital-7";
+  src: url("../Fonts/ScienceGothic-Bold.ttf") format("truetype");
+}
+.clock{
+  height: 100px;
+  width: 250px;
+  background-color: var(--bg);
+  backdrop-filter: blur(var(--blur));
+  color: var(--txt);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border-radius: var(--border-radius);
+  font-family: "Digital-7", sans-serif;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border: 1px solid var(--border);
+  cursor: none;
+}
