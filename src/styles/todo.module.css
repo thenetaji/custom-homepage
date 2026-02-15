@@ -1,0 +1,84 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+}
+
+.inputWrapper{
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.inputWrapper input{
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(var(--blur-2));
+  color: var(--txt-muted);
+}
+
+.inputWrapper input::placeholder{
+  color: var(--txt-muted);
+}
+
+.inputWrapper button{
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+    background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(var(--blur-2));
+  color: var(--txt);
+}
+.todoList{
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(var(--blur-2));
+}
+.todoList li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--txt);
+}
+.footer{
+  margin-top: 20px;
+  color: var(--txt-muted);
+}
+.emptyMessage{
+  color: var(--txt-muted);
+}
+.deleteButton{
+  background: transparent;
+  border: none;
+  color: var(--txt-muted);
+  cursor: pointer;
+}
+
+.clearButton{
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+  color: var(--txt-muted);
+  cursor: pointer;
+  margin-left: 5px;
+}
+.todoText{
+  margin-left: 5px;
+}
+input[type="checkbox"]{
+  accent-color: var(--accent);
+}

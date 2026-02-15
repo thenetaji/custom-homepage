@@ -1,0 +1,174 @@
+.bookmarksContainer {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 10px;
+}
+
+.bookmarksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.bookmarkWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bookmarkLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  background: var(--bg);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.bookmarkLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bookmarkLink i {
+  font-size: 28px;
+}
+
+.customIcon {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.bookmarkLabel {
+  display: none;
+}
+
+.removeButton {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: rgba(220, 53, 69, 0.9);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.removeButton i {
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-left: 8px;
+  position: absolute;
+  bottom: -10px;
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  backdrop-filter: blur(var(--blur));
+}
+
+.controlButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.controlButton i {
+  font-size: 20px;
+}
+
+.controlButton span {
+  display: none;
+}
+
+.addForm {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  backdrop-filter: blur(var(--blur));
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.addForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addForm input {
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.addForm input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.addForm input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.submitButton {
+  padding: 12px 24px;
+  background: rgba(40, 167, 69, 0.8);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: rgba(40, 167, 69, 1);
+  transform: translateY(-2px);
+}
